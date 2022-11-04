@@ -1,7 +1,7 @@
 /**
  * @file: Account.hpp
- * @post: design of account with all the methods and private members. One important difference is the Network<Account> pointer and
- *        the followAccount method
+ * @post: design of account with all the methods and private members. 
+ * @post: we also define the all_posts LinkedList which will contain Post pointers that will contain the different Post in the Accounts. 
  */
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
