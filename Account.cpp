@@ -2,7 +2,9 @@
 /**
  * @author: Dariel A. Martinez
  * @date:  4 November 2022
- * @post: 
+ * @post: This project involves knowing how to deal with singly LinkedList as well as manipulating not where specific node go, but also how to add and/or 
+ *        remove nodes from a LinkedList. And once we're able to actually to add nodes, we also have to know how to manipulate the Node pointers in the 
+          LinkedList to not only get the item in the nodes, but to also be able to make sure that the pointers are actually pointing to the right palces. 
  * @file: Account.cpp
  */
 #include "Account.hpp"
