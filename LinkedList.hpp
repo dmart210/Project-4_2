@@ -19,6 +19,7 @@ class LinkedList {
     public:
         /* Default constructor*/
         LinkedList();
+        /*Parameterized  Constructor*/
         LinkedList(const LinkedList& list);
 
 
@@ -46,8 +47,6 @@ class LinkedList {
             @post     : removes node at  position
         **/
         bool remove(const int &position);
-
-        void displayList();
 
 
         /* @return  : the size of the list */

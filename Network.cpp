@@ -141,7 +141,10 @@ Network<T>& Network<T>::operator-=(const Network<T>& another_net){
     return *this;
 }
 /**
- * @param: const reference of the Account that is going to be displayeed
+ * @param: A T type(account) passed by reference
+ * @note: This method will print out all the Post in the method only if the iterator is not nullptr(reached the end of the list), and if the 
+ *        account is in the Network. If it passes that test, then it will get the item of the position of the iterator, and then displayPost(),
+ *        which as stated before Polymorphised so it will print out the respective Post for the children class of Post.
  */
 template<class T>
 void Network<T>::printFeedForAccount(T& account_being_displayed){
@@ -192,6 +195,10 @@ int Network<T>::getIndexOf(const T* _username){
     return result;
 }
 
+/**
+ * @param: A string reference that will contain a phrase that is case sensitive
+ * @return: Will return the number of Post pointers removed if it contained that phrase 
+ */
 template<class T>
 int Network<T>::removeIfContains(const string& phrase_sensitive){
 

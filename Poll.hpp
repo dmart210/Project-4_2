@@ -28,4 +28,7 @@ class Poll : public Post{
         void getPollOptions()const ;
         int getPollVotes(int index_of_option)const ;
         void displayPost()override;
+        /** @note: This method is overriden so if a Post pointer of type Poll was called and it was to displayPost(),
+        *          then it would use the displayPost() of its most derived form which, in this case, is Poll.
+        */
 };

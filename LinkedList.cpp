@@ -4,6 +4,11 @@
 template<typename T>
 LinkedList<T>::LinkedList() : head_{nullptr}, size_{0} {}
 
+
+/**
+ * @param: A separate LinkedList passed by reference
+ * @note: This will set this current LinkedList to have the same private members as the one in the parameter. 
+ */
 template<typename T>
 LinkedList<T>::LinkedList(const LinkedList<T>& list) : head_{nullptr}, size_{0} {
     if (!list.isEmpty()) {
@@ -101,6 +106,12 @@ bool LinkedList<T>::remove(const int&position) {
 
 }
 
+/**
+ * @param: A LinkedList passed by Reference.
+ * @note: This will get The LinkedList that is in the parameter, and set those Nodes in reverse order to the (this) LinkedList. 
+ * 
+ */
+
 template <typename T>
 void LinkedList<T>::reverseCopy(const LinkedList &a_list) {
     LinkedList<T> newList(a_list);
@@ -189,7 +200,12 @@ bool LinkedList<T>::moveItem(int &current_position, int &new_position) {
 
 
 
-
+/**
+ * @param: A T type(Post pointers) item that is passed by reference
+ * @return: This method will return true if it was able to set the item, which is already in the list, to the top of the list which is at 
+ *          position 0 of the List. 
+ * 
+ */
 template<typename T>
 bool LinkedList<T>::moveItemToTop(const T& item){
     if (getIndexOf(item) < 1) return false; //If the item does not exist or it is already on top, return false
@@ -202,12 +218,4 @@ bool LinkedList<T>::moveItemToTop(const T& item){
         head_ = new_head; //Set the List's head to the new head pointer
         return true;
     }
-}
-template<class T>
-void LinkedList<T>::displayList(){
-    while (head_ != nullptr){
-        std::cout << head_->getItem() << "-> ";
-        head_ = head_->getNext();
-    }
-    std::cout << endl;
 }

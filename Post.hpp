@@ -31,7 +31,7 @@ class Post{
         void setUsername(const string& _username);
         void setBody(const string& _body);
         void setTitle(const string& _title);
-        virtual void displayPost() = 0;
+        virtual void displayPost() = 0; // A pure virutal function that wont be implemented in the Post class itself. But when called, it will call the most derived version i.e its children classes. 
         Post(string _title, string _body, string _username){
             title = _title;
             body  = _body;

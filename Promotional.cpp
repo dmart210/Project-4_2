@@ -33,8 +33,7 @@ bool Promotional::setLink(const string& _link){
     return true;
 }
 /**
- * @post: method that prints out the the title body nd the time it was created
- * 
+ * @post: Method that prints out the title, the body, and as well as the Link of the promotion. 
  */
 void Promotional::displayPost(){
     string x = Post::getTitle();

@@ -18,7 +18,7 @@ class Account{
     private:
         string username; //username of account
         string password; //password of account
-        LinkedList<Post*> all_posts; //all__posts contained in Account 
+        LinkedList<Post*> all_posts; //A new LinkedList that will store Post pointers. 
         time_t current_time; // time_t object that gets the time
         Network<Account>* account_in_network;//pointer to the network
         vector<string> usernames_of_following; //vector of all usernames the Account follows
@@ -90,6 +90,11 @@ class Account{
          */
         vector<string> viewFollowing() const;
 
+        /**
+         * @param: Post pointer
+         * @param: the new string title
+         * @param: the new string body
+         */
         void updatePost(const Post* post_ptr, const string& new_title,const string& new_body);
 
         bool removePost(Post* post_ptr);

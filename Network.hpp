@@ -22,7 +22,7 @@ class Network{
         static const int DEFAULT_CAPACITY = 200; //default capacity of how many items can be in a network
         const T* temp_items[DEFAULT_CAPACITY]; // temp_items being the amount of accounts in the network. Which are all pointers to the Accounts
         int item_count; //keep count of the amount of items being removed or added to the network
-        LinkedList<Post*> feed; //feed of the accounts post
+        LinkedList<Post*> feed; // a LinkedList called feed that will store pointers to Post, which will be how we will keep track of the post in the accounts. 
         int getIndexOf(const T* _username); // private method that gets the index of where in the temp_items the _username is found if it is there.
     public:
         void printVector(const T& vec);
